@@ -90,7 +90,7 @@ export function Testimonials() {
 
       {/* Airbnb Badge */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-14 md:mb-16">
-        <div ref={badgeRef} className="opacity-0 flex justify-center">
+        <div ref={badgeRef} className="opacity-0 flex flex-col items-center gap-3">
           <a
             href="https://www.airbnb.com/rooms/1182698702822127628"
             target="_blank"
@@ -98,19 +98,10 @@ export function Testimonials() {
             className="inline-flex items-center gap-5 bg-white border border-[#E8E0D0] rounded-2xl px-8 py-5 shadow-warm hover:shadow-warm-lg transition-all duration-300 hover:-translate-y-1 group"
           >
             {/* Airbnb logo */}
-            <svg
-              className="w-8 h-8 flex-shrink-0"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16 2C10.477 2 6 6.477 6 12c0 7.714 10 18 10 18s10-10.286 10-18c0-5.523-4.477-10-10-10zm0 13.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"
-                fill="#FF5A5F"
-              />
+            <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2C10.477 2 6 6.477 6 12c0 7.714 10 18 10 18s10-10.286 10-18c0-5.523-4.477-10-10-10zm0 13.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="#FF5A5F" />
             </svg>
 
-            {/* Divider */}
             <div className="w-px h-10 bg-[#E8E0D0]" />
 
             {/* Stars + rating */}
@@ -121,13 +112,12 @@ export function Testimonials() {
                 ))}
               </div>
               <span className="text-2xl font-sans font-bold text-[#3D3229] leading-none">5.0</span>
-              <span className="text-xs text-[#8B7355] font-body">14 recensioni</span>
+              <span className="text-xs text-[#8B7355] font-body">Tutte 5 stelle ★</span>
             </div>
 
-            {/* Divider */}
             <div className="w-px h-10 bg-[#E8E0D0]" />
 
-            {/* Guest favorite badge */}
+            {/* Guest favorite */}
             <div className="flex flex-col items-center gap-1">
               <svg className="w-6 h-6 text-[#FF5A5F]" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -136,6 +126,11 @@ export function Testimonials() {
               <span className="text-xs text-[#8B7355] font-body whitespace-nowrap">Verificato da Airbnb</span>
             </div>
           </a>
+
+          {/* Subtitle note */}
+          <p className="text-[#8B7355] font-body text-xs text-center">
+            Alcune delle recensioni verificate dei nostri ospiti su Airbnb
+          </p>
         </div>
       </div>
 
@@ -149,7 +144,7 @@ export function Testimonials() {
           loop={true}
           speed={800}
           autoplay={{
-            delay: 4000,
+            delay: 4500,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -162,20 +157,17 @@ export function Testimonials() {
         >
           {testimonialsConfig.testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="group bg-[#E8E0D0] rounded-xl p-8 md:p-10 h-full transition-all duration-500 hover:bg-[#3D3229] hover:text-white hover:shadow-xl">
-                {/* Top row: quote icon + airbnb verified */}
-                <div className="flex items-start justify-between mb-6">
+              <div className="group bg-[#E8E0D0] rounded-xl p-8 md:p-10 h-full transition-all duration-500 hover:bg-[#3D3229] hover:shadow-xl">
+
+                {/* Top row: quote icon + airbnb verified badge */}
+                <div className="flex items-start justify-between mb-5">
                   <Quote
-                    className="w-10 h-10 text-[#6B8E23]/30 group-hover:text-[#8FBC8F]/40 transition-colors duration-500"
+                    className="w-9 h-9 text-[#6B8E23]/30 group-hover:text-[#8FBC8F]/40 transition-colors duration-500"
                     strokeWidth={1}
                   />
-                  {/* Airbnb verified badge */}
                   <div className="flex items-center gap-1.5 bg-white/60 group-hover:bg-white/10 rounded-full px-3 py-1 transition-colors duration-500">
-                    <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 32 32" fill="none">
-                      <path
-                        d="M16 2C10.477 2 6 6.477 6 12c0 7.714 10 18 10 18s10-10.286 10-18c0-5.523-4.477-10-10-10zm0 13.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"
-                        fill="#FF5A5F"
-                      />
+                    <svg className="w-3 h-3 flex-shrink-0" viewBox="0 0 32 32" fill="none">
+                      <path d="M16 2C10.477 2 6 6.477 6 12c0 7.714 10 18 10 18s10-10.286 10-18c0-5.523-4.477-10-10-10zm0 13.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="#FF5A5F" />
                     </svg>
                     <span className="text-[10px] font-body text-[#5C4D3C] group-hover:text-[#FAF8F3]/70 transition-colors duration-500 whitespace-nowrap">
                       Verificato Airbnb
@@ -190,30 +182,35 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                {/* Quote text */}
-                <p className="text-[#5C4D3C] group-hover:text-[#FAF8F3]/90 font-body text-base md:text-lg leading-relaxed mb-8 transition-colors duration-500">
+                {/* Quote */}
+                <p className="text-[#5C4D3C] group-hover:text-[#FAF8F3]/90 font-body text-base leading-relaxed mb-8 transition-colors duration-500">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#6B8E23]/30 group-hover:border-[#8FBC8F]/50 transition-colors duration-500">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                {/* Author + date */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    {/* Avatar initials */}
+                    <div className="w-10 h-10 rounded-full bg-[#6B8E23]/20 group-hover:bg-[#8FBC8F]/20 flex items-center justify-center flex-shrink-0 transition-colors duration-500">
+                      <span className="text-sm font-sans font-bold text-[#6B8E23] group-hover:text-[#8FBC8F] transition-colors duration-500">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-sans font-semibold text-sm text-[#3D3229] group-hover:text-[#FAF8F3] transition-colors duration-500">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-xs text-[#8B7355] group-hover:text-[#FAF8F3]/60 font-body transition-colors duration-500">
+                        {testimonial.role}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-sans font-semibold text-[#3D3229] group-hover:text-[#FAF8F3] transition-colors duration-500">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-[#8B7355] group-hover:text-[#FAF8F3]/60 font-body transition-colors duration-500">
-                      {testimonial.role}
-                    </p>
-                  </div>
+                  {/* Date */}
+                  <span className="text-xs text-[#8B7355]/70 group-hover:text-[#FAF8F3]/40 font-body transition-colors duration-500">
+                    {testimonial.date}
+                  </span>
                 </div>
+
               </div>
             </SwiperSlide>
           ))}
@@ -232,7 +229,7 @@ export function Testimonials() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-[#6B8E23] font-body text-sm border-b border-[#6B8E23]/30 pb-1 hover:border-[#6B8E23] transition-colors duration-300 group"
         >
-          Leggi tutte le 14 recensioni su Airbnb
+          Leggi tutte le nostre recensioni su Airbnb
           <svg className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
