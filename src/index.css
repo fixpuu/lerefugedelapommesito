@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Le Refuge de la Pomme - Warm Natural Theme */
+    /* Green Apple & Beige Color System */
+    --background: 45 30% 96%; /* Warm cream/beige */
+    --foreground: 30 15% 20%; /* Dark brown */
+    --card: 45 25% 98%;
+    --card-foreground: 30 15% 20%;
+    --popover: 45 30% 96%;
+    --popover-foreground: 30 15% 20%;
+    --primary: 85 45% 35%; /* Green apple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 30% 88%; /* Warm beige */
+    --secondary-foreground: 30 15% 20%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 85 50% 40%; /* Brighter green apple */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 20% 80%;
+    --input: 35 20% 90%;
+    --ring: 85 45% 35%;
+    --radius: 0.75rem;
+    
+    /* Custom properties */
+    --cream: #FAF8F3;
+    --warm-beige: #E8E0D0;
+    --green-apple: #6B8E23;
+    --green-light: #8FBC8F;
+    --brown-dark: #3D3229;
+    --brown-medium: #5C4D3C;
+    --brown-light: #8B7355;
+    --warm-white: #FFFEF9;
+    --soft-coral: #D4A574;
+  }
+
+  .light-section {
+    --background: 45 30% 96%;
+    --foreground: 30 15% 20%;
+    --card: 45 25% 98%;
+    --card-foreground: 30 15% 20%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 30 10% 45%;
+    --border: 35 20% 80%;
+  }
+
+  .dark-section {
+    --background: 30 15% 20%;
+    --foreground: 45 30% 96%;
+    --card: 30 12% 15%;
+    --card-foreground: 45 30% 96%;
+    --muted: 30 10% 25%;
+    --muted-foreground: 45 20% 70%;
+    --border: 30 10% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* Viewfinder overlay effect */
+  .viewfinder {
+    position: relative;
+  }
+  
+  .viewfinder::before,
+  .viewfinder::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .viewfinder::before {
+    top: 16px;
+    left: 16px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  
+  .viewfinder::after {
+    bottom: 16px;
+    right: 16px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+  .viewfinder-corners {
+    position: relative;
+  }
+  
+  .viewfinder-corners .corner-tr,
+  .viewfinder-corners .corner-bl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .viewfinder-corners .corner-tr {
+    top: 16px;
+    right: 16px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+  .viewfinder-corners .corner-bl {
+    bottom: 16px;
+    left: 16px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-[#6B8E23] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#5a7a1d] shadow-lg transform -translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#E8E0D0] text-[#3D3229] px-8 py-4 rounded-full font-semibold transition-all duration-300;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-[#d8d0c0] shadow-lg transform -translate-y-1;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .card-hover:hover {
+    @apply shadow-xl transform -translate-y-2;
+  }
+
+  /* Service icon hover */
+  .service-icon {
+    @apply transition-all duration-300;
+  }
+  
+  .service-icon:hover {
+    @apply text-[#6B8E23] transform scale-110;
+  }
+
+  /* Input focus styles */
+  .input-focus {
+    @apply transition-all duration-300 border-2 border-transparent;
+  }
+  
+  .input-focus:focus {
+    @apply border-[#6B8E23] outline-none ring-2 ring-[#6B8E23]/20;
+  }
+
+  /* Smooth section transitions */
+  .section-transition {
+    @apply transition-opacity duration-700 ease-in-out;
+  }
+
+  /* Gallery image hover */
+  .gallery-image {
+    @apply transition-all duration-500 overflow-hidden;
+  }
+  
+  .gallery-image img {
+    @apply transition-transform duration-500;
+  }
+  
+  .gallery-image:hover img {
+    @apply scale-110;
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    @apply bg-white rounded-2xl p-8 shadow-lg transition-all duration-300;
+  }
+  
+  .testimonial-card:hover {
+    @apply shadow-2xl transform -translate-y-1;
+  }
+
+  /* Navigation link hover */
+  .nav-link {
+    @apply relative transition-colors duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[#6B8E23] transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .tracking-tight {
+    letter-spacing: -0.025em;
+  }
+  
+  .tracking-tighter {
+    letter-spacing: -0.05em;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, #FAF8F3 0%, #E8E0D0 100%);
+  }
+  
+  .bg-gradient-green {
+    background: linear-gradient(135deg, #6B8E23 0%, #8FBC8F 100%);
+  }
+
+  /* Text gradient */
+  .text-gradient-green {
+    background: linear-gradient(135deg, #6B8E23 0%, #8FBC8F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shadow utilities */
+  .shadow-warm {
+    box-shadow: 0 10px 40px -10px rgba(107, 142, 35, 0.2);
+  }
+  
+  .shadow-warm-lg {
+    box-shadow: 0 20px 60px -15px rgba(107, 142, 35, 0.25);
+  }
+}
