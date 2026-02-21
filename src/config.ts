@@ -413,7 +413,7 @@ export const footerConfig: FooterConfig = {
     { label: "FAQ", href: "#faq" },
   ],
   tagline: "La tua casa in Valle d'Aosta\nDove il comfort incontra la montagna",
-  copyright: "© 2024 Le Refuge de la Pomme. Tutti i diritti riservati.",
+  copyright: "© 2026 Le Refuge de la Pomme. Tutti i diritti riservati.",
   bottomLinks: [
     { label: "Privacy Policy", href: "#" },
     { label: "Termini e Condizioni", href: "#" },
