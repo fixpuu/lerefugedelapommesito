@@ -159,6 +159,21 @@ export function Footer() {
               </div>
             )}
           </div>
+
+          {/* Developed by */}
+          <div className="mt-6 pt-4 border-t border-[#3D3229]/5 flex justify-center">
+            <p className="text-[#8B7355]/50 font-body text-xs">
+              Developed by{' '}
+              <a
+                href="https://www.nexivo.works"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#6B8E23] transition-colors duration-300"
+              >
+                Nexivo
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
