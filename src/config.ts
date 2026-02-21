@@ -27,7 +27,7 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   backgroundText: "Le Refuge de la Pomme",
-  heroImage: "/images/fbf38e76-7fa6-4135-8808-6b782515342a.jpeg",
+  heroImage: "/images/aedc96e7-5efb-4ce6-8341-2571750ad499.jpeg",
   heroImageAlt: "Esterno del B&B Le Refuge de la Pomme con vista sulle montagne",
   overlayText: "La tua casa in Valle d'Aosta",
   brandName: "Le Refuge de la Pomme",
