@@ -181,7 +181,7 @@ export const servicesConfig: ServicesConfig = {
     {
       iconName: "Car",
       title: "Garage Privato",
-      description: "Ampio garage per due auto. Comodo e sicuro.",
+      description: "Ampio garage. Comodo e sicuro.",
     },
     {
       iconName: "Wifi",
@@ -380,7 +380,7 @@ export const faqConfig: FAQConfig = {
     {
       id: "4",
       question: "L'appartamento dispone di parcheggio?",
-      answer: "Sì, l'appartamento include un ampio garage privato per due auto. È incluso nel prezzo della prenotazione.",
+      answer: "Sì, l'appartamento include un ampio garage e un piazzale esterno. È incluso nel prezzo della prenotazione.",
     },
     {
       id: "5",
