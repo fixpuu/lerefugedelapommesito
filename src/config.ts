@@ -356,17 +356,17 @@ export const faqConfig: FAQConfig = {
     {
       id: "2",
       question: "È possibile portare animali domestici?",
-      answer: "Sì, accettiamo animali domestici di piccola taglia su richiesta. Ti preghiamo di comunicarcelo al momento della prenotazione per verificare la disponibilità.",
+      answer: "No, non accettiamo animali domestici.",
     },
     {
       id: "3",
       question: "Quali sono gli orari di check-in e check-out?",
-      answer: "Il check-in è disponibile dalle 15:00, mentre il check-out deve essere effettuato entro le 11:00. Per esigenze diverse, contattaci al numero +393473014084.",
+      answer: "Per informazioni sul check-in e check-out contattaci al numero +393473014084.",
     },
     {
       id: "4",
       question: "L'appartamento dispone di parcheggio?",
-      answer: "Sì, l'appartamento include un ampio garage privato per due auto con accesso diretto all'alloggio. È incluso nel prezzo della prenotazione.",
+      answer: "Sì, l'appartamento include un ampio garage privato. È incluso nel prezzo della prenotazione.",
     },
     {
       id: "5",
@@ -376,7 +376,7 @@ export const faqConfig: FAQConfig = {
     {
       id: "6",
       question: "Come posso prenotare?",
-      answer: "Puoi prenotare direttamente su Airbnb cliccando sul pulsante 'Prenota su Airbnb' in homepage o in fondo alla pagina. Per qualsiasi informazione puoi anche contattarci al numero +393473014084.",
+      answer: "Puoi prenotare direttamente su Airbnb cliccando sul pulsante 'Prenota su Airbnb' in homepage o in fondo alla pagina. Oppure al numero +393473014084.",
     },
   ],
 };
