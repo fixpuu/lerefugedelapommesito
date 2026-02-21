@@ -162,17 +162,26 @@ export function Footer() {
 
           {/* Developed by */}
           <div className="mt-6 pt-4 border-t border-[#3D3229]/5 flex justify-center">
-            <p className="text-[#8B7355]/50 font-body text-xs">
-              Developed by{' '}
-              <a
-                href="https://www.nexivo.works"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#6B8E23] transition-colors duration-300"
+            <a
+              href="https://www.nexivo.works"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#6B8E23] font-body text-sm hover:text-[#5a7a1d] transition-colors duration-300 group"
+            >
+              <svg
+                className="w-4 h-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                Nexivo
-              </a>
-            </p>
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              Developed by Nexivo
+            </a>
           </div>
         </div>
       </div>
