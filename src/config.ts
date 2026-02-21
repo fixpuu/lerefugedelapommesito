@@ -27,7 +27,7 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   backgroundText: "Le Refuge de la Pomme",
-  heroImage: "/images/aedc96e7-5efb-4ce6-8341-2571750ad499.jpeg",
+  heroImage: "/images/fbf38e76-7fa6-4135-8808-6b782515342a.jpeg",
   heroImageAlt: "Esterno del B&B Le Refuge de la Pomme con vista sulle montagne",
   overlayText: "La tua casa in Valle d'Aosta",
   brandName: "Le Refuge de la Pomme",
@@ -181,7 +181,7 @@ export const servicesConfig: ServicesConfig = {
     {
       iconName: "Car",
       title: "Garage Privato",
-      description: "Ampio garage per due auto con accesso diretto all'appartamento. Comodo e sicuro.",
+      description: "Ampio garage per due auto. Comodo e sicuro.",
     },
     {
       iconName: "Wifi",
@@ -276,7 +276,7 @@ export interface Testimonial {
   id: number;
   name: string;
   role: string;
-  image: string;
+  date: string;
   quote: string;
 }
 
@@ -294,31 +294,45 @@ export const testimonialsConfig: TestimonialsConfig = {
   testimonials: [
     {
       id: 1,
-      name: "Marco e Laura",
-      role: "Milano, Italia",
-      image: "/images/0adc8127-4f2c-418d-89c8-9f097ca27412.jpeg",
-      quote: "Appartamento meraviglioso, pulitissimo e con tutti i comfort. La vista dalle finestre è spettacolare e la posizione perfetta per esplorare la Valle d'Aosta. Torneremo sicuramente!",
+      name: "Garreth",
+      role: "9 anni su Airbnb",
+      date: "Febbraio 2025",
+      quote: "Manuela's chalet is a very special place to stay only minutes from Aosta. Brand new and exceptional. As a family of 6 we could not have asked for more. The beds were so comfortable, our boys loved the bunk beds. It was a home away from home.",
     },
     {
       id: 2,
-      name: "Famiglia Rossi",
-      role: "Torino, Italia",
-      image: "/images/6fb4e713-c9f6-40b4-997f-134526fda9e1.jpeg",
-      quote: "Siamo stati una settimana con i nostri bambini e ci siamo trovati benissimo. La cucina è completamente attrezzata, le camere spaziose e il garage molto comodo. Consigliatissimo!",
+      name: "Marta",
+      role: "10 anni su Airbnb",
+      date: "Gennaio 2025",
+      quote: "L'appartamento è davvero molto bello! Eravamo sei amiche e abbiamo trovato l'appartamento comodo sia per raggiungere Pila che per visitare Aosta. Spazioso e luminoso, con parcheggio comodo. Manuela sempre disponibile e rapida!",
     },
     {
       id: 3,
-      name: "Giulia e Paolo",
-      role: "Roma, Italia",
-      image: "/images/9c6296b6-b323-46b5-a016-c202c9713334.jpeg",
-      quote: "Location incantevole, arredamento curato nei minimi dettagli e proprietari disponibilissimi. Il soggiorno con travi a vista è semplicemente stupendo. Una vacanza da ricordare!",
+      name: "Luca",
+      role: "6 anni su Airbnb",
+      date: "Gennaio 2026",
+      quote: "Bellissimo appartamento moderno con una vista mozzafiato. La notte di Capodanno, la vista dell'intera valle allo scoccare della mezzanotte con i fuochi d'artificio ovunque è stato uno spettacolo impagabile.",
     },
     {
       id: 4,
-      name: "Anna e Francesco",
-      role: "Bologna, Italia",
-      image: "/images/7f261218-a198-45ed-a3d2-2d481476f063.jpeg",
-      quote: "Perfetto per una fuga romantica in montagna. L'appartamento è caldo e accogliente, con tutto ciò che serve. La posizione è strategica per visitare Aosta e i dintorni.",
+      name: "Natasha",
+      role: "Regno Unito",
+      date: "Giugno 2025",
+      quote: "The place was beautifully located with an incredible view over the Aosta valley. The pictures don't do justice to the apartment — it feels a lot more spacious, modern and clean. We very much recommend this place and would go and stay again.",
+    },
+    {
+      id: 5,
+      name: "Alessandro",
+      role: "5 anni su Airbnb",
+      date: "Agosto 2024",
+      quote: "Casa nuova in stile valdostano, bella e super attrezzata. Pulizia impeccabile. A pochi minuti da Aosta e dalla funivia per Pila, immersa nella tranquillità dei frutteti. Questa casa è ancora più bella e confortevole di quanto si evince dalle foto.",
+    },
+    {
+      id: 6,
+      name: "Laurent",
+      role: "12 anni su Airbnb",
+      date: "Agosto 2024",
+      quote: "Gorgeous brand new apartment with large private garage. A short drive from the center of Aosta, perfect for visiting the area. Hard to find anything better.",
     },
   ],
 };
@@ -356,17 +370,17 @@ export const faqConfig: FAQConfig = {
     {
       id: "2",
       question: "È possibile portare animali domestici?",
-      answer: "No, non accettiamo animali domestici.",
+      answer: "Siamo spiacenti, non è consentito portare animali domestici nell'appartamento.",
     },
     {
       id: "3",
       question: "Quali sono gli orari di check-in e check-out?",
-      answer: "Per informazioni sul check-in e check-out contattaci al numero +393473014084.",
+      answer: "Il check-in è disponibile dalle 15:00, mentre il check-out deve essere effettuato entro le 11:00. Per esigenze diverse, contattaci al numero +393473014084.",
     },
     {
       id: "4",
       question: "L'appartamento dispone di parcheggio?",
-      answer: "Sì, l'appartamento include un ampio garage privato. È incluso nel prezzo della prenotazione.",
+      answer: "Sì, l'appartamento include un ampio garage privato per due auto. È incluso nel prezzo della prenotazione.",
     },
     {
       id: "5",
@@ -376,7 +390,7 @@ export const faqConfig: FAQConfig = {
     {
       id: "6",
       question: "Come posso prenotare?",
-      answer: "Puoi prenotare direttamente su Airbnb cliccando sul pulsante 'Prenota su Airbnb' in homepage o in fondo alla pagina. Oppure al numero +393473014084.",
+      answer: "Puoi prenotare direttamente su Airbnb cliccando sul pulsante 'Prenota su Airbnb' in homepage o in fondo alla pagina. Per qualsiasi informazione puoi anche contattarci al numero +393473014084.",
     },
   ],
 };
@@ -413,7 +427,7 @@ export const footerConfig: FooterConfig = {
     { label: "FAQ", href: "#faq" },
   ],
   tagline: "La tua casa in Valle d'Aosta\nDove il comfort incontra la montagna",
-  copyright: "© 2026 Le Refuge de la Pomme. Tutti i diritti riservati.",
+  copyright: "© 2025 Le Refuge de la Pomme. Tutti i diritti riservati.",
   bottomLinks: [
     { label: "Privacy Policy", href: "#" },
     { label: "Termini e Condizioni", href: "#" },
