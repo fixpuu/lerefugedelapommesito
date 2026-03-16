@@ -180,24 +180,12 @@ export function IntroGrid() {
         {/* ── Masonry Grid - 12 images with varied layout ── */}
         <div
           ref={gridRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[180px] md:auto-rows-[220px]"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[320px]"
         >
           {introGridConfig.portfolioImages.map((image, index) => (
             <div
               key={index}
-              className={`grid-item relative overflow-hidden rounded-xl group cursor-pointer opacity-0 ${
-                // First image - large, spans 2 rows
-                index === 0 ? 'md:col-span-2 md:row-span-2' : ''
-              } ${
-                // 6th image - spans 2 columns
-                index === 5 ? 'md:col-span-2' : ''
-              } ${
-                // 9th image - spans 2 rows
-                index === 8 ? 'md:row-span-2' : ''
-              } ${
-                // Last image - large
-                index === 11 ? 'md:col-span-2' : ''
-              }`}
+              className="grid-item relative overflow-hidden rounded-xl group cursor-pointer opacity-0"
             >
               <img
                 src={image.src}
@@ -205,15 +193,6 @@ export function IntroGrid() {
                 className="w-full h-full object-cover will-change-transform"
                 loading="lazy"
               />
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-[#6B8E23]/0 group-hover:bg-[#6B8E23]/20 transition-colors duration-500" />
-
-              {/* Viewfinder corners on hover */}
-              <div className="absolute top-3 left-3 w-6 h-6 md:w-8 md:h-8 border-t-2 border-l-2 border-white/0 group-hover:border-white/80 transition-all duration-500" />
-              <div className="absolute top-3 right-3 w-6 h-6 md:w-8 md:h-8 border-t-2 border-r-2 border-white/0 group-hover:border-white/80 transition-all duration-500" />
-              <div className="absolute bottom-3 left-3 w-6 h-6 md:w-8 md:h-8 border-b-2 border-l-2 border-white/0 group-hover:border-white/80 transition-all duration-500" />
-              <div className="absolute bottom-3 right-3 w-6 h-6 md:w-8 md:h-8 border-b-2 border-r-2 border-white/0 group-hover:border-white/80 transition-all duration-500" />
             </div>
           ))}
         </div>

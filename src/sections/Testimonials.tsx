@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
-import { Quote } from 'lucide-react';
+import { Quote, Star, CheckCircle, ExternalLink } from 'lucide-react';
 // @ts-ignore
 import 'swiper/css';
 // @ts-ignore
@@ -61,15 +61,54 @@ export function Testimonials() {
     >
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 md:mb-20">
-        <div ref={headerRef} className="text-center opacity-0">
+        <div ref={headerRef} className="opacity-0">
           {testimonialsConfig.subtitle && (
-            <p className="text-[#6B8E23] text-sm font-body uppercase tracking-widest mb-4">
+            <p className="text-[#6B8E23] text-sm font-body uppercase tracking-widest mb-4 text-center md:text-left">
               {testimonialsConfig.subtitle}
             </p>
           )}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-[#3D3229] tracking-tight">
-            {testimonialsConfig.titleRegular} <span className="font-serif italic font-normal text-[#8B7355]">{testimonialsConfig.titleItalic}</span>
-          </h2>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-[#3D3229] tracking-tight">
+                {testimonialsConfig.titleRegular}{' '}
+                <span className="font-serif italic font-normal text-[#8B7355]">
+                  {testimonialsConfig.titleItalic}
+                </span>
+              </h2>
+              <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:gap-4 justify-center md:justify-start">
+                <div className="inline-flex items-center gap-2 bg-[#3D3229] text-white px-4 py-2 rounded-full shadow-sm">
+                  <Star className="w-4 h-4" />
+                  <span className="font-semibold">{testimonialsConfig.rating.toFixed(1)}</span>
+                  <span className="text-sm text-white/70">({testimonialsConfig.reviewCount} recensioni)</span>
+                </div>
+                {testimonialsConfig.guestFavorite && (
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#8FBC8F]/20 text-[#3D3229] text-sm font-semibold">
+                    <CheckCircle className="w-4 h-4 text-[#8FBC8F]" />
+                    Preferito dagli ospiti
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <a
+              href={testimonialsConfig.airbnbLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#3D3229]/30 rounded-full text-sm font-semibold text-[#3D3229] hover:bg-[#3D3229] hover:text-white transition"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Leggi tutte le recensioni
+            </a>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+            {testimonialsConfig.breakdown.map((item) => (
+              <div key={item.label} className="bg-white/50 rounded-xl p-3 text-center">
+                <p className="text-xs font-semibold text-[#3D3229]/70">{item.label}</p>
+                <p className="mt-1 text-lg font-bold text-[#3D3229]">{item.value.toFixed(1)}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -116,6 +155,31 @@ export function Testimonials() {
                 <p className="text-[#5C4D3C] group-hover:text-[#FAF8F3]/90 font-body text-base md:text-lg leading-relaxed mb-8 transition-colors duration-500">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
+
+                {/* Rating + Verified */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-2">
+                    {Array.from({ length: 5 }).map((_, idx) => (
+                      <Star
+                        key={idx}
+                        className={`w-4 h-4 ${
+                          testimonial.rating && idx < Math.round(testimonial.rating)
+                            ? 'text-[#8FBC8F]'
+                            : 'text-[#8FBC8F]/40'
+                        }`}
+                      />
+                    ))}
+                    {testimonial.verified && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 bg-[#8FBC8F]/10 text-[#3D3229] text-xs font-semibold rounded-full">
+                        <CheckCircle className="w-3 h-3 text-[#8FBC8F]" />
+                        Verificato Airbnb
+                      </span>
+                    )}
+                  </div>
+                  {testimonial.date && (
+                    <p className="text-xs text-[#8B7355]">{testimonial.date}</p>
+                  )}
+                </div>
 
                 {/* Author */}
                 <div className="flex items-center gap-4">

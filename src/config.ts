@@ -27,7 +27,7 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   backgroundText: "Le Refuge de la Pomme",
-  heroImage: "/images/fbf38e76-7fa6-4135-8808-6b782515342a.jpeg",
+  heroImage: "/images/cop.jpeg",
   heroImageAlt: "Esterno del B&B Le Refuge de la Pomme con vista sulle montagne",
   overlayText: "La tua casa in Valle d'Aosta",
   brandName: "Le Refuge de la Pomme",
@@ -63,18 +63,19 @@ export const introGridConfig: IntroGridConfig = {
   titleLine2: "in Valle d'Aosta",
   description: "Le Refuge de la Pomme è un accogliente appartamento situato a Gressan, nel cuore della Valle d'Aosta. Circondato dalle maestose montagne alpine, offre un'esperienza autentica di montagna con tutti i comfort moderni. Ideale per famiglie, coppie e gruppi di amici che cercano una vacanza rilassante nella natura.",
   portfolioImages: [
-    { src: "/images/0adc8127-4f2c-418d-89c8-9f097ca27412.jpeg", alt: "Soggiorno accogliente con travi in legno" },
-    { src: "/images/9c6296b6-b323-46b5-a016-c202c9713334.jpeg", alt: "Cucina moderna e attrezzata" },
-    { src: "/images/6fb4e713-c9f6-40b4-997f-134526fda9e1.jpeg", alt: "Camera da letto matrimoniale" },
-    { src: "/images/7f261218-a198-45ed-a3d2-2d481476f063.jpeg", alt: "Camera con letti a castello" },
-    { src: "/images/931bd77f-a402-4884-842f-75de56dafa08.jpeg", alt: "Bagno moderno" },
-    { src: "/images/5a2af939-08a2-41f5-aaaa-02983b00c7cb.jpeg", alt: "Zona pranzo con tavolo e sedie" },
-    { src: "/images/0872fc94-5210-4d71-a7aa-57eca8c30518.jpeg", alt: "Bagno con doccia" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.25.jpeg", alt: "Soggiorno accogliente con travi in legno" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (2).jpeg", alt: "Zona pranzo con tavolo e sedie" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.32 (1).jpeg", alt: "Cucina moderna e attrezzata" },
     { src: "/images/09dfd78b-6be2-4cc5-ac48-d349ad0b80a7.jpeg", alt: "Soggiorno caldo e accogliente" },
     { src: "/images/29cbfa5c-91ef-4ff5-bbfb-8a3c90eb77f2.jpeg", alt: "Cucina attrezzata" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.32.jpeg", alt: "Camera da letto matrimoniale" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (1).jpeg", alt: "Camera con letti a castello" },
     { src: "/images/e09a99ee-98b9-419d-bd03-0a8bc882a76a.jpeg", alt: "Camera matrimoniale elegante" },
     { src: "/images/b61f250d-6e8b-4775-b51c-2bf66f8536a1.jpeg", alt: "Camera familiare con letti a castello" },
     { src: "/images/ec8d1688-d81e-4502-a478-6eeacfd51517.jpeg", alt: "Ingresso del B&B" },
+    { src: "/images/931bd77f-a402-4884-842f-75de56dafa08.jpeg", alt: "Bagno moderno" },
+    { src: "/images/0872fc94-5210-4d71-a7aa-57eca8c30518.jpeg", alt: "Bagno con doccia" },
+    { src: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (8).jpeg", alt: "Spazi interni" },
   ],
   accentText: "Gressan, Valle d'Aosta - Italia",
   airbnbLink: "https://www.airbnb.com/rooms/1182698702822127628",
@@ -112,30 +113,22 @@ export const featuredProjectsConfig: FeaturedProjectsConfig = {
   projects: [
     {
       id: 1,
-      title: "Soggiorno Caldo e Accogliente",
-      category: "Zona Giorno",
+      title: "Zona Pranzo e Cucina",
+      category: "Cucina e Pranzo",
       year: "",
-      image: "/images/09dfd78b-6be2-4cc5-ac48-d349ad0b80a7.jpeg",
-      description: "Spazioso soggiorno con comodi divani, TV, travi in legno a vista e vista panoramica sulle montagne. Perfetto per rilassarsi dopo una giornata di escursioni.",
+      image: "/images/9c6296b6-b323-46b5-a016-c202c9713334.jpeg",
+      description: "Spazioso ambiente con cucina moderna completamente attrezzata e zona pranzo elegante. Frigorifero, forno, piano cottura, microonde, angolo bar e tavolo da pranzo per 6 persone. L'ambiente perfetto per cucinare e condividere i pasti in compagnia.",
     },
     {
       id: 2,
-      title: "Cucina Attrezzata",
-      category: "Zona Cucina",
-      year: "",
-      image: "/images/29cbfa5c-91ef-4ff5-bbfb-8a3c90eb77f2.jpeg",
-      description: "Cucina moderna completamente attrezzata con frigorifero, forno, piano cottura, microonde e area pranzo. Tutto ciò che serve per preparare deliziosi pasti in casa.",
-    },
-    {
-      id: 3,
       title: "Camera Matrimoniale",
       category: "Camera",
       year: "",
-      image: "/images/e09a99ee-98b9-419d-bd03-0a8bc882a76a.jpeg",
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (13).jpeg",
       description: "Elegante camera matrimoniale con armadio in legno, comò con specchio e finiture calde che creano un'atmosfera romantica e rilassante.",
     },
     {
-      id: 4,
+      id: 3,
       title: "Camera Familiare",
       category: "Camera",
       year: "",
@@ -253,7 +246,7 @@ export const whyChooseMeConfig: WhyChooseMeConfig = {
   ],
   featureCards: [
     {
-      image: "/images/5a2af939-08a2-41f5-aaaa-02983b00c7cb.jpeg",
+      image: "/images/Capture.PNG",
       imageAlt: "Zona pranzo con tavolo e sedie",
       title: "Zona Pranzo",
       description: "Tavolo da pranzo per 6 persone, perfetto per gustare i pasti in compagnia.",
@@ -265,8 +258,8 @@ export const whyChooseMeConfig: WhyChooseMeConfig = {
       description: "Bagno completo con doccia, bidet, lavabo e tutti i comfort necessari.",
     },
   ],
-  wideImage: "/images/26b800e7-065c-41df-ac04-15d94fe97a2d.jpeg",
-  wideImageAlt: "Vista esterna del B&B con giardino e montagne",
+  wideImage: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (6).jpeg",
+  wideImageAlt: "Vista esterna del B&B con giardino e meli a destra",
   wideTitle: "Un'oasi di pace",
   wideDescription: "Immerso nel verde con vista panoramica sulle montagne, Le Refuge de la Pomme è il luogo ideale per rigenerarsi e godere della natura circostante.",
 };
@@ -276,14 +269,27 @@ export interface Testimonial {
   id: number;
   name: string;
   role: string;
+  date?: string;
+  rating?: number;
+  verified?: boolean;
   image: string;
   quote: string;
+}
+
+export interface RatingBreakdown {
+  label: string;
+  value: number;
 }
 
 export interface TestimonialsConfig {
   subtitle: string;
   titleRegular: string;
   titleItalic: string;
+  rating: number;
+  reviewCount: number;
+  guestFavorite: boolean;
+  breakdown: RatingBreakdown[];
+  airbnbLink: string;
   testimonials: Testimonial[];
 }
 
@@ -291,34 +297,78 @@ export const testimonialsConfig: TestimonialsConfig = {
   subtitle: "Dicono di Noi",
   titleRegular: "Recensioni",
   titleItalic: "Ospiti",
+  rating: 5.0,
+  reviewCount: 15,
+  guestFavorite: true,
+  breakdown: [
+    { label: "Pulizia", value: 5.0 },
+    { label: "Precisione", value: 4.9 },
+    { label: "Check-in", value: 4.7 },
+    { label: "Comunicazione", value: 4.9 },
+    { label: "Posizione", value: 4.9 },
+    { label: "Rapporto qualità/prezzo", value: 4.8 },
+  ],
+  airbnbLink: "https://www.airbnb.com/rooms/1182698702822127628/reviews",
   testimonials: [
     {
       id: 1,
-      name: "Marco e Laura",
-      role: "Milano, Italia",
-      image: "/images/0adc8127-4f2c-418d-89c8-9f097ca27412.jpeg",
-      quote: "Appartamento meraviglioso, pulitissimo e con tutti i comfort. La vista dalle finestre è spettacolare e la posizione perfetta per esplorare la Valle d'Aosta. Torneremo sicuramente!",
+      name: "Natasha",
+      role: "9 anni su Airbnb",
+      date: "Giugno 2025",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (6).jpeg",
+      quote: "Il posto era magnificamente posizionato con una vista incredibile sulla valle d'Aosta... L'appartamento è molto spazioso, moderno, pulito e dotato di tutte le attrezzature necessarie per un soggiorno confortevole.",
     },
     {
       id: 2,
-      name: "Famiglia Rossi",
-      role: "Torino, Italia",
-      image: "/images/6fb4e713-c9f6-40b4-997f-134526fda9e1.jpeg",
-      quote: "Siamo stati una settimana con i nostri bambini e ci siamo trovati benissimo. La cucina è completamente attrezzata, le camere spaziose e il garage molto comodo. Consigliatissimo!",
+      name: "Paul",
+      role: "4 anni su Airbnb",
+      date: "Marzo 2026",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (7).jpeg",
+      quote: "Abbiamo trascorso un bellissimo soggiorno, il cottage è accogliente, ben attrezzato, confortevole e la vista su Aosta è molto bella. La host Manuela è molto reattiva e gli scambi sono stati fluidi.",
     },
     {
       id: 3,
-      name: "Giulia e Paolo",
-      role: "Roma, Italia",
-      image: "/images/9c6296b6-b323-46b5-a016-c202c9713334.jpeg",
-      quote: "Location incantevole, arredamento curato nei minimi dettagli e proprietari disponibilissimi. Il soggiorno con travi a vista è semplicemente stupendo. Una vacanza da ricordare!",
+      name: "Josh",
+      role: "11 anni su Airbnb",
+      date: "Agosto 2025",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (8).jpeg",
+      quote: "Appartamento bellissimo e impeccabile, ma anche casalingo e confortevole. La vista è il punto forte.",
     },
     {
       id: 4,
-      name: "Anna e Francesco",
-      role: "Bologna, Italia",
-      image: "/images/7f261218-a198-45ed-a3d2-2d481476f063.jpeg",
-      quote: "Perfetto per una fuga romantica in montagna. L'appartamento è caldo e accogliente, con tutto ciò che serve. La posizione è strategica per visitare Aosta e i dintorni.",
+      name: "Matteo",
+      role: "4 anni su Airbnb",
+      date: "Febbraio 2026",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (13).jpeg",
+      quote: "Appartamento recentemente ristrutturato e curato in ogni dettaglio. Host gentile e disponibile. Location incantevole, tranquilla ma molto vicino ad Aosta.",
+    },
+    {
+      id: 5,
+      name: "Luca",
+      role: "6 anni su Airbnb",
+      date: "Gennaio 2026",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (2).jpeg",
+      quote: "Bellissimo appartamento moderno con vista mozzafiato. Attenzione ai dettagli e davvero tranquillo. La vista sulla valle a mezzanotte è stata impagabile.",
+    },
+    {
+      id: 6,
+      name: "Erika",
+      role: "10 anni su Airbnb",
+      date: "Gennaio 2026",
+      rating: 5,
+      verified: true,
+      image: "/images/WhatsApp Image 2026-03-16 at 19.14.34 (1).jpeg",
+      quote: "Appartamento moderno ed estremamente curato in montagna, facile da trovare in una posizione eccellente vicino ad Aosta e Pila.",
     },
   ],
 };
