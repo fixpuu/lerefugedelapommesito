@@ -406,17 +406,17 @@ export const faqConfig: FAQConfig = {
     {
       id: "2",
       question: "È possibile portare animali domestici?",
-      answer: "Sì, accettiamo animali domestici di piccola taglia su richiesta. Ti preghiamo di comunicarcelo al momento della prenotazione per verificare la disponibilità.",
+      answer: "No, non accettiamo animali domestici.",
     },
     {
       id: "3",
       question: "Quali sono gli orari di check-in e check-out?",
-      answer: "Il check-in è disponibile dalle 15:00, mentre il check-out deve essere effettuato entro le 11:00. Per esigenze diverse, contattaci al numero +393473014084.",
+      answer: "Check-in entro le 10:00. Per informazioni su orari di check-in/check-out chiama il numero +393473014084.",
     },
     {
       id: "4",
       question: "L'appartamento dispone di parcheggio?",
-      answer: "Sì, l'appartamento include un ampio garage privato per due auto con accesso diretto all'alloggio. È incluso nel prezzo della prenotazione.",
+      answer: "Garage con posto per un'auto, più piazzale esterno disponibile per un'ulteriore auto.",
     },
     {
       id: "5",
@@ -463,7 +463,7 @@ export const footerConfig: FooterConfig = {
     { label: "FAQ", href: "#faq" },
   ],
   tagline: "La tua casa in Valle d'Aosta\nDove il comfort incontra la montagna",
-  copyright: "© 2024 Le Refuge de la Pomme. Tutti i diritti riservati.",
+  copyright: "© 2026 Le Refuge de la Pomme. Tutti i diritti riservati. Developed by https://nexivo.works",
   bottomLinks: [
     { label: "Privacy Policy", href: "#" },
     { label: "Termini e Condizioni", href: "#" },

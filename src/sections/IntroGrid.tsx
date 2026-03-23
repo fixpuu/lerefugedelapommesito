@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { introGridConfig } from '../config';
@@ -27,6 +27,7 @@ export function IntroGrid() {
   const titleLine2Ref = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const [lightboxImage, setLightboxImage] = useState<{src: string; alt: string} | null>(null);
 
   if (!introGridConfig.titleLine1 && !introGridConfig.titleLine2 && introGridConfig.portfolioImages.length === 0) return null;
 
@@ -186,6 +187,7 @@ export function IntroGrid() {
             <div
               key={index}
               className="grid-item relative overflow-hidden rounded-xl group cursor-pointer opacity-0"
+              onClick={() => setLightboxImage({ src: image.src, alt: image.alt })}
             >
               <img
                 src={image.src}
@@ -203,6 +205,32 @@ export function IntroGrid() {
             <p className="text-sm text-[#8B7355] font-body tracking-wider uppercase">
               {introGridConfig.accentText}
             </p>
+          </div>
+        )}
+
+        {lightboxImage && (
+          <div
+            className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-6"
+            onClick={() => setLightboxImage(null)}
+          >
+            <div className="relative max-w-[95vw] max-h-[95vh]">
+              <img
+                src={lightboxImage.src}
+                alt={lightboxImage.alt}
+                className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl"
+                onClick={(event) => event.stopPropagation()}
+              />
+              <button
+                className="absolute top-2 right-2 text-white bg-black/60 rounded-full p-2 hover:bg-black/80"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setLightboxImage(null);
+                }}
+                aria-label="Chiudi anteprima immagine"
+              >
+                ✕
+              </button>
+            </div>
           </div>
         )}
       </div>

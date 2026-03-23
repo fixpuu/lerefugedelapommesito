@@ -16,7 +16,6 @@ export function Contact() {
     email: '',
     phone: '',
     checkIn: '',
-    checkOut: '',
     guests: '2',
     message: ''
   });
@@ -99,7 +98,6 @@ export function Contact() {
         email: '',
         phone: '',
         checkIn: '',
-        checkOut: '',
         guests: '2',
         message: ''
       });
@@ -228,24 +226,6 @@ export function Contact() {
                         type="date"
                         name="checkIn"
                         value={formData.checkIn}
-                        onChange={handleChange}
-                        required
-                        className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#FAF8F3] border-2 border-transparent focus:border-[#6B8E23] focus:outline-none focus:ring-2 focus:ring-[#6B8E23]/20 transition-all duration-300 text-[#3D3229] font-body"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Check-out */}
-                  <div>
-                    <label className="block text-sm font-body text-[#5C4D3C] mb-2">
-                      Check-out *
-                    </label>
-                    <div className="relative">
-                      <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#8B7355]" />
-                      <input
-                        type="date"
-                        name="checkOut"
-                        value={formData.checkOut}
                         onChange={handleChange}
                         required
                         className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#FAF8F3] border-2 border-transparent focus:border-[#6B8E23] focus:outline-none focus:ring-2 focus:ring-[#6B8E23]/20 transition-all duration-300 text-[#3D3229] font-body"
